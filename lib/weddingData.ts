@@ -25,7 +25,7 @@ export const couple: Record<
     name: "Ismawati",
     shortName: "Ismawati",
     role: "putri",
-    father: "Bapak Ahmad",
+    father: "Bapak Ahmad (Alm)",
     mother: "Ibu Junenah",
     instagram: "@ism.awati22",
   },
