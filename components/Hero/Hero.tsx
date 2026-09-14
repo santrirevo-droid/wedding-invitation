@@ -49,8 +49,8 @@ export default function Hero() {
         >
           <FloralLayer
             src="/floral/floral-wc-spray-e.png"
-            width={585}
-            height={579}
+            width={1000}
+            height={1000}
             sizes="44px"
             className="h-auto w-full"
           />
@@ -61,8 +61,8 @@ export default function Hero() {
         >
           <FloralLayer
             src="/floral/floral-wc-spray-e.png"
-            width={585}
-            height={579}
+            width={1000}
+            height={1000}
             sizes="40px"
             className="h-auto w-full -scale-x-100"
           />

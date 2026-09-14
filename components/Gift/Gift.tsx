@@ -38,8 +38,8 @@ export default function Gift() {
         <FloralLayer
           ref={sprayRef}
           src="/floral/floral-wc-spray-a.png"
-          width={302}
-          height={424}
+          width={571}
+          height={1000}
           sizes="(min-width: 640px) 112px, 80px"
           className="h-auto w-full -scale-x-100"
         />
@@ -57,7 +57,7 @@ export default function Gift() {
             <div
               key={account.bank}
               data-reveal
-              className="rounded-2xl border border-border bg-paper px-6 py-7 shadow-[0_14px_36px_-22px_rgba(74,30,43,0.25)]"
+              className="rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-6 py-7 shadow-[0_14px_36px_-22px_rgba(61,42,26,0.22)] ring-1 ring-inset ring-accent/10"
             >
               <div className="font-display text-xl font-medium text-ink">{account.bank}</div>
               <div className="mt-2 font-mono text-lg font-semibold tabular-nums tracking-[0.16em] text-gold">
@@ -83,7 +83,7 @@ export default function Gift() {
 
           <div
             data-reveal
-            className="rounded-2xl border border-border bg-paper px-6 py-7 shadow-[0_14px_36px_-22px_rgba(74,30,43,0.25)]"
+            className="rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-6 py-7 shadow-[0_14px_36px_-22px_rgba(61,42,26,0.22)] ring-1 ring-inset ring-accent/10"
           >
             <div className="font-display text-xl font-medium text-ink">Alamat Pengiriman Kado</div>
             <div className="mt-2 font-mono text-base leading-[1.6] tracking-wide text-gold">

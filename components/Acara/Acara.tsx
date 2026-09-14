@@ -61,8 +61,8 @@ export default function Acara() {
         <FloralLayer
           ref={sprayRef}
           src="/floral/floral-wc-spray-c.png"
-          width={324}
-          height={321}
+          width={1000}
+          height={1000}
           sizes="(min-width: 640px) 128px, 96px"
           className="h-auto w-full -scale-x-100"
         />
@@ -82,7 +82,7 @@ export default function Acara() {
           {cells.map((cell) => (
             <div
               key={cell.label}
-              className="rounded-2xl border border-border bg-paper px-2 py-6 shadow-[0_10px_28px_-16px_rgba(74,30,43,0.18)]"
+              className="rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-2 py-6 shadow-[0_10px_28px_-16px_rgba(61,42,26,0.18)] ring-1 ring-inset ring-accent/10"
             >
               <div
                 suppressHydrationWarning
@@ -101,7 +101,7 @@ export default function Acara() {
             so only time (and, for Resepsi, venue/actions) repeats here */}
         <div
           data-reveal
-          className="mt-6 rounded-2xl border border-border bg-paper px-6 py-8 shadow-[0_10px_28px_-16px_rgba(74,30,43,0.18)]"
+          className="mt-6 rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-6 py-8 shadow-[0_14px_32px_-20px_rgba(61,42,26,0.22)] ring-1 ring-inset ring-accent/10"
         >
           <h3 className="font-display text-lg font-medium text-ink">{akad.title}</h3>
           <div className="mx-auto mt-2 h-px w-8 bg-gold" />
@@ -126,7 +126,7 @@ export default function Acara() {
               href={venue.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gold-dark px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-paper shadow-[0_10px_26px_-10px_rgba(122,59,71,0.55)] transition-[filter] hover:brightness-90"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gold-dark px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-paper shadow-[0_10px_26px_-10px_rgba(110,69,39,0.55)] transition-[filter] hover:brightness-90"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-paper" />
               Lihat Lokasi

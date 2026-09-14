@@ -63,8 +63,8 @@ export default function Mempelai() {
         <FloralLayer
           ref={sprayRef}
           src="/floral/floral-wc-spray-b.png"
-          width={571}
-          height={509}
+          width={1000}
+          height={753}
           sizes="(min-width: 640px) 128px, 96px"
           className="h-auto w-full -scale-x-100"
         />

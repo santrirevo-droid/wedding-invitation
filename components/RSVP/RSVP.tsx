@@ -76,8 +76,8 @@ export default function RSVP() {
         <FloralLayer
           ref={sprayRef}
           src="/floral/floral-wc-spray-e.png"
-          width={585}
-          height={579}
+          width={1000}
+          height={1000}
           sizes="(min-width: 640px) 128px, 96px"
           className="h-auto w-full"
         />
@@ -185,7 +185,7 @@ export default function RSVP() {
         </form>
 
         {sentWish && (
-          <div data-reveal className="mt-6 rounded-2xl border border-border bg-paper px-5 py-4 text-left">
+          <div data-reveal className="mt-6 rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-5 py-4 text-left shadow-[0_10px_24px_-18px_rgba(61,42,26,0.2)] ring-1 ring-inset ring-accent/10">
             <p className="font-accent text-sm font-medium tracking-[0.12em] text-ink-soft [font-variant-caps:small-caps]">
               Ucapan Terkirim
             </p>

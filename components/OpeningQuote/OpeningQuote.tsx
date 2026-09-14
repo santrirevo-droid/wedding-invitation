@@ -24,8 +24,8 @@ export default function OpeningQuote() {
         <FloralLayer
           ref={sprayRef}
           src="/floral/floral-wc-spray-a.png"
-          width={302}
-          height={424}
+          width={571}
+          height={1000}
           sizes="(min-width: 640px) 128px, 96px"
           className="h-auto w-full"
         />

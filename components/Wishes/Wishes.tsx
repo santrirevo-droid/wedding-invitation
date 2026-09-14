@@ -64,8 +64,8 @@ export default function Wishes() {
         <FloralLayer
           ref={sprayRef}
           src="/floral/floral-wc-spray-b.png"
-          width={571}
-          height={509}
+          width={1000}
+          height={753}
           sizes="(min-width: 640px) 128px, 96px"
           className="h-auto w-full"
         />
@@ -85,7 +85,7 @@ export default function Wishes() {
                 <div
                   key={wish.id}
                   data-wish-card
-                  className="rounded-2xl border border-border bg-paper px-5 py-4"
+                  className="rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-5 py-4 shadow-[0_10px_24px_-18px_rgba(61,42,26,0.2)] ring-1 ring-inset ring-accent/10"
                 >
                   <div className="flex items-center gap-3">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold font-display text-base font-semibold text-paper">

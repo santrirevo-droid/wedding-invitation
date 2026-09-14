@@ -135,7 +135,7 @@ export default function RekapClient() {
               {familyEntries.map((entry) => (
                 <li
                   key={entry.id}
-                  className="rounded-xl border border-border bg-paper px-5 py-4"
+                  className="rounded-xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-5 py-4 shadow-[0_8px_20px_-16px_rgba(61,42,26,0.2)]"
                 >
                   <p className="truncate text-xl font-medium text-ink">
                     {entry.name}

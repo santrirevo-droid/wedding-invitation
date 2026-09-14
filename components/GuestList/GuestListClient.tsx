@@ -199,7 +199,7 @@ export default function GuestListClient({ family }: { family: Family }) {
         Tuliskan nama tamu yang ingin Anda undang, satu nama per baris.
       </p>
 
-      <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-6 rounded-2xl border border-border bg-paper p-6">
+      <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-6 rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] p-6 shadow-[0_14px_32px_-20px_rgba(61,42,26,0.22)] ring-1 ring-inset ring-accent/10">
         <div>
           <label className={labelClass} htmlFor="guest-names">
             Nama Tamu
@@ -278,7 +278,7 @@ export default function GuestListClient({ family }: { family: Family }) {
             {entries.map((entry) => (
               <li
                 key={entry.id}
-                className="rounded-xl border border-border bg-paper px-5 py-4"
+                className="rounded-xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] px-5 py-4 shadow-[0_8px_20px_-16px_rgba(61,42,26,0.2)]"
               >
                 <div className="min-w-0">
                   <p className="truncate text-xl font-medium text-ink">
