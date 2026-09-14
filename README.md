@@ -2,15 +2,25 @@ Undangan pernikahan digital — Next.js. Diduplikat dari template undangan sebel
 
 ## Checklist sebelum dipakai
 
-- [ ] `lib/weddingData.ts` — nama pasangan, orang tua, Instagram, tanggal & jam acara, venue, rekening, alamat kado.
-- [ ] `lib/families.ts` — daftar keluarga untuk halaman `/daftar-tamu` (slug + label).
-- [ ] `components/Persiapan/defaultData.ts` — isi awal dashboard `/persiapan` (checklist, rundown, budget) masih generik; sunting atau langsung edit dari halaman setelah deploy.
+- [x] `lib/weddingData.ts` — nama pasangan, orang tua, Instagram, tanggal & jam acara, venue, rekening, alamat kado.
+- [x] `lib/families.ts` — daftar keluarga untuk halaman `/daftar-tamu` (slug + label).
+- [x] `components/Persiapan/defaultData.ts` — isi awal dashboard `/persiapan` (checklist, rundown, budget) masih generik; sunting atau langsung edit dari halaman setelah deploy.
 - [ ] `public/music/` — tambahkan file lagu sendiri sebagai `wedding-song.m4a` (dihapus dari duplikat ini karena berhak cipta/personal ke pasangan asal).
-- [ ] `app/icon.png`, `app/apple-icon.png` & `public/floral/monogram-crest.png` — masih placeholder ampersand generik; ganti dengan monogram sendiri jika perlu.
+- [ ] `app/icon.png` & `app/apple-icon.png` — masih placeholder ampersand generik; ganti dengan monogram sendiri jika perlu (Hero sudah pakai inisial pasangan, bukan gambar, sejak repalette earth-tone).
 - [ ] Foto-foto di `public/` (bila ditambahkan nanti) dan galeri — belum ada, tambahkan sesuai kebutuhan.
-- [ ] ⚠️ Font "TT Fors" (`assets/fonts/tt-fors/`, dipakai untuk handle Instagram) adalah trial font dengan klausul lisensi *no public site* — sudah dipakai di situs undangan sebelumnya atas keputusan sadar pemilik situs tersebut. Menjalankan situs kedua ini secara publik dengan font yang sama memperluas risiko lisensi itu; pertimbangkan ganti font lain atau beli lisensinya sebelum situs ini live.
+- [x] ~~Font "TT Fors" ... trial, no-public-site~~ — sudah diganti total ke Google Fonts (EB Garamond, Parisienne, Jost, Amiri) saat repalette earth-tone; tidak ada lagi font lokal berlisensi trial di repo ini.
 - [ ] Password edit `/persiapan/itinerary` masih default `"0000"` (lihat `components/Persiapan/Itinerary.tsx`) — ganti bila perlu keamanan lebih.
 - [ ] Backend (Redis/KV untuk fitur Wishes & Daftar Tamu) belum disambungkan — lihat bagian **Environment variables** di bawah.
+
+## Tampilan (earth-tone repalette)
+
+- Palet warna & seluruh font diganti total ke tema earth-tone (espresso,
+  terracotta, sand) — lihat komentar di `app/globals.css` dan
+  `app/layout.tsx`. Nama variabel CSS (`--maroon-deep`, `--gold`, dst.)
+  sengaja dipertahankan supaya class Tailwind di ~15 komponen tidak perlu
+  diubah; hanya nilai warnanya yang berganti.
+- Monogram Hero sekarang inisial pasangan (mis. "M & I") yang diambil dari
+  `lib/weddingData.ts`, bukan gambar ampersand generik.
 
 ## Getting Started
 

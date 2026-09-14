@@ -1,38 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  /* Deep maroon, gold-accented — dark wine-red page background, warm
-     cream text, bright gold accents. White "paper" cards stay for
-     functional content (form fields, lists) where text needs a light
-     surface — their internal colors (gold/ink/ink-soft/border below) are
-     unchanged from the old light theme since paper itself stayed light.
-     Every text/background pairing below was checked against WCAG 2.x
-     contrast math (4.5:1 body text, 3:1 large/decorative ≥24px or bold
-     ≥18.5px) before use — see globals.css history for the verified pairs. */
-  --maroon-deep: #3a0a10;
-  --maroon: #4c0f17;
-  --maroon-light: #5c1620;
-  --paper: #fff9f4;
+  /* Earth-tone repalette — deep espresso-brown page background, sand/cream
+     text, terracotta-clay accents. White "paper" cards stay for functional
+     content (form fields, lists) where text needs a light surface, now
+     tinted warm sand instead of pink-white. Variable NAMES are kept as
+     maroon-/gold- for minimal diff against ~15 components that already
+     reference these Tailwind tokens (bg-maroon-deep, text-gold, etc.) —
+     only the color VALUES changed, so no component file needed touching.
+     Every text/background pairing below keeps the same lightness structure
+     as the previous (verified) palette, just rotated in hue from
+     red-wine/rose to brown/terracotta/ochre, so WCAG 2.x contrast (4.5:1
+     body text, 3:1 large/decorative ≥24px or bold ≥18.5px) still holds. */
+  --maroon-deep: #2b1c12;
+  --maroon: #3a2717;
+  --maroon-light: #4a331e;
+  --paper: #faf3e8;
 
-  /* accents/text for content sitting directly on the maroon background */
-  --accent: #d9a94e;
-  --accent-dark: #b3822f;
-  --on-maroon: #f6e8d8;
-  --on-maroon-soft: #d8b79e;
+  /* accents/text for content sitting directly on the dark background */
+  --accent: #c17a45;
+  --accent-dark: #9c5f34;
+  --on-maroon: #f0e2d0;
+  --on-maroon-soft: #d4b596;
 
-  /* unchanged — accents/text for content inside light "paper" cards */
-  --gold: #8b4b58;
-  --gold-light: #b76e79;
-  --gold-dark: #7a3b47;
-  --ink: #4a1e2b;
-  --ink-soft: #6b3f4a;
-  --border: #e8c4cc;
+  /* accents/text for content inside light "paper" cards */
+  --gold: #8a5a34;
+  --gold-light: #ab7a4e;
+  --gold-dark: #6e4527;
+  --ink: #3d2a1a;
+  --ink-soft: #6b5238;
+  --border: #e6d3b8;
 
   /* kept only as a small functional signal (RSVP "hadir" status, inside
-     paper cards) */
-  --sage: #1f6b45;
-  --sage-light: #3f9c68;
-  --sage-dark: #123d27;
+     paper cards) — shifted from emerald to olive to stay in the earth
+     family */
+  --sage: #5b6b3a;
+  --sage-light: #7c8f52;
+  --sage-dark: #3a4623;
 }
 
 @theme inline {

@@ -94,17 +94,20 @@ export default function Hero() {
               The Wedding Of
             </p>
 
-            {/* monogram — generic gold ampersand crest placeholder; swap
-                for the couple's own monogram art if desired */}
-            <div className="w-[220px] shrink-0 sm:w-[248px]">
-              <FloralLayer
-                src="/floral/monogram-crest.png"
-                width={921}
-                height={731}
-                sizes="248px"
-                priority
-                className="h-auto w-full select-none"
-              />
+            {/* monogram — couple's initials instead of a generic ampersand
+                crest image, so it always matches whoever's data is loaded */}
+            <div aria-hidden="true" className="flex items-center justify-center gap-3 sm:gap-4">
+              <span className="h-px w-6 bg-accent/40 sm:w-8" />
+              <span className="font-script text-[clamp(2.75rem,14vw,4rem)] leading-none text-accent">
+                {couple.groom.shortName.charAt(0)}
+              </span>
+              <span className="font-display text-lg italic leading-none text-on-maroon-soft sm:text-xl">
+                &amp;
+              </span>
+              <span className="font-script text-[clamp(2.75rem,14vw,4rem)] leading-none text-accent">
+                {couple.bride.shortName.charAt(0)}
+              </span>
+              <span className="h-px w-6 bg-accent/40 sm:w-8" />
             </div>
 
             <h1

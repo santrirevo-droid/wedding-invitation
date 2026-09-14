@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Amiri, Montserrat, Fraunces } from "next/font/google";
-import localFont from "next/font/local";
+import { EB_Garamond, Amiri, Jost, Parisienne } from "next/font/google";
 import BackgroundPattern from "@/components/BackgroundPattern";
 import { couple, events, venue } from "@/lib/weddingData";
 import "./globals.css";
 
-// the one serif that now carries everything except the couple's name —
-// --font-body and --font-accent both alias to this in globals.css
-const cormorant = Cormorant_Garamond({
+// the one serif that carries everything except the couple's name and
+// section flourishes — --font-body and --font-accent both alias to this
+// in globals.css. Google-hosted, so no local-font license risk (replaces
+// the earlier Cormorant Garamond + locally-bundled files below).
+const ebGaramond = EB_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -20,49 +21,53 @@ const amiri = Amiri({
   weight: ["400", "700"],
 });
 
-// used only for the couple's name — a flowing script instead of the stiffer
-// serif, everywhere else keeps Cormorant Garamond for legibility
-const eyesomeScript = localFont({
-  src: "../assets/fonts/eyesome-script/EyesomeScript.otf",
+// couple's name, RSVP heading, and the "Mempelai" section eyebrow all share
+// this flowing script — one elegant flourish face instead of two
+// competing local script fonts
+const parisienne = Parisienne({
   variable: "--font-script",
+  subsets: ["latin"],
   weight: "400",
 });
 
-// used only for the Mempelai section's descriptive body copy
-const montserrat = Montserrat({
+// used only for the Mempelai section's descriptive body copy and the
+// couple's Instagram handles — a clean geometric sans as counterweight to
+// the serif/script above (also replaces the TT Fors trial font, which
+// carried a no-public-site license clause)
+const jost = Jost({
   variable: "--font-mempelai",
   subsets: ["latin"],
   weight: ["400", "500"],
 });
 
-// used only for the couple's full names (Mempelai section headings)
-const cmuSerif = localFont({
-  src: "../assets/fonts/cmu-serif/CMUSerif-BoldItalic.ttf",
+// used only for the couple's full names (Mempelai section headings) — bold
+// italic Garamond instead of a separate local serif
+const ebGaramondFullname = EB_Garamond({
   variable: "--font-fullname",
+  subsets: ["latin"],
   weight: "700",
   style: "italic",
 });
 
+// used only for the couple's Instagram handles
+const jostHandle = Jost({
+  variable: "--font-handle",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
+// used only for the RSVP section's "Konfirmasi Kehadiran" heading — same
+// script family as the couple's name for a cohesive, restrained look
+const parisienneRsvp = Parisienne({
+  variable: "--font-rsvp",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 // used only for the "Mempelai" section heading
-const fraunces = Fraunces({
+const parisienneTitle = Parisienne({
   variable: "--font-title-mempelai",
   subsets: ["latin"],
-});
-
-// used only for the couple's Instagram handles — a TypeType trial font, kept
-// per explicit user decision despite the trial license's no-public-site
-// clause (see conversation for context); swap for a licensed build once
-// TT Fors is purchased.
-const ttFors = localFont({
-  src: "../assets/fonts/tt-fors/TTForsTrialVariable.ttf",
-  variable: "--font-handle",
-  weight: "100 900",
-});
-
-// used only for the RSVP section's "Konfirmasi Kehadiran" heading
-const magnoliaScript = localFont({
-  src: "../assets/fonts/magnolia-script/MagnoliaScript.otf",
-  variable: "--font-rsvp",
   weight: "400",
 });
 
@@ -89,7 +94,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${cormorant.variable} ${amiri.variable} ${eyesomeScript.variable} ${montserrat.variable} ${cmuSerif.variable} ${fraunces.variable} ${ttFors.variable} ${magnoliaScript.variable} h-full antialiased`}
+      className={`${ebGaramond.variable} ${amiri.variable} ${parisienne.variable} ${jost.variable} ${ebGaramondFullname.variable} ${jostHandle.variable} ${parisienneRsvp.variable} ${parisienneTitle.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-warm-white font-body text-ink">
         <BackgroundPattern />
