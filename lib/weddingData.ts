@@ -19,7 +19,7 @@ export const couple: Record<
     role: "putra",
     father: "Bapak Taofik Hs",
     mother: "Ibu Nahiyah",
-    instagram: "@username", // TODO: isi/instagram opsional
+    instagram: "@miqdadkiting",
   },
   bride: {
     name: "Ismawati",
@@ -27,7 +27,7 @@ export const couple: Record<
     role: "putri",
     father: "Bapak Ahmad",
     mother: "Ibu Junenah",
-    instagram: "@username", // TODO: isi/instagram opsional
+    instagram: "@ism.awati22",
   },
 };
 
@@ -45,10 +45,10 @@ export const events = [
 ];
 
 export const venue = {
-  name: "Kediaman Mempelai", // TODO: konfirmasi ini rumah mempelai pria/wanita
+  name: "Kediaman Mempelai Wanita",
   location:
     "Kp. Pagedangan RT.11 RW.4, Ds. Tanjungsari, Kec. Pabuaran, Kab. Serang, Banten",
-  mapsUrl: "https://maps.app.goo.gl/", // TODO: isi link Google Maps lokasi
+  mapsUrl: "https://goo.gl/maps/NFGNQ6Y6erhjFeAt5?g_st=aw",
 };
 
 export const bankAccounts = [

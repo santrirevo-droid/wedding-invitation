@@ -8,8 +8,8 @@ export const DEFAULT_DATA: ProgressData = {
     nameSecond: "Ismawati",
     weddingDate: "2026-09-20",
     ceremonyTime: "08:30",
-    venue: "Kediaman Mempelai, Ds. Tanjungsari, Kec. Pabuaran, Kab. Serang",
-    venueMapUrl: "",
+    venue: "Kediaman Mempelai Wanita, Ds. Tanjungsari, Kec. Pabuaran, Kab. Serang",
+    venueMapUrl: "https://goo.gl/maps/NFGNQ6Y6erhjFeAt5?g_st=aw",
     totalBudget: 0,
   },
   tasks: [
