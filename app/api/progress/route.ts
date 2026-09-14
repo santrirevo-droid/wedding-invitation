@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getRedis } from "@/lib/redis";
+import { PROGRESS_KEY } from "@/lib/storageKeys";
 
-const PROGRESS_KEY = "wedding-progress:v1";
 const MAX_BYTES = 200_000; // guard against abuse on this no-auth endpoint
 
 function notConfigured() {

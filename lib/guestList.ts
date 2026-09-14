@@ -8,7 +8,7 @@ export type GuestEntry = {
   createdAt: number;
 };
 
-export const GUEST_LIST_KEY = "guestlist:v1";
+export { GUEST_LIST_KEY } from "./storageKeys";
 export const MAX_NAME_LENGTH = 80;
 export const MAX_RELATION_LENGTH = 120;
 

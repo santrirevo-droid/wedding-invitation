@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getRedis } from "@/lib/redis";
+import { WISHES_KEY } from "@/lib/storageKeys";
 
-const WISHES_KEY = "wishes:v1";
 const MAX_WISHES = 500;
 
 export type Wish = {

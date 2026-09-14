@@ -1,3 +1,4 @@
+import { coupleSlug } from "./coupleSlug";
 import { couple, events, venue, WEDDING_DATE_ISO } from "./weddingData";
 
 function toIcsUtc(date: Date) {
@@ -26,11 +27,6 @@ function buildEventDetails() {
 
   return { start, end, summary, location, description };
 }
-
-/** URL-safe slug built from the couple's short names, e.g. "morgan-samira". */
-const coupleSlug = `${couple.groom.shortName}-${couple.bride.shortName}`
-  .toLowerCase()
-  .replace(/[^a-z0-9]+/g, "-");
 
 function buildIcs() {
   const { start, end, summary, location, description } = buildEventDetails();
