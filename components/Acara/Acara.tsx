@@ -75,7 +75,8 @@ export default function Acara() {
           data-reveal
           className="mt-3 inline-block rounded-full border border-accent/40 bg-accent/10 px-6 py-2 font-display text-2xl font-semibold tracking-wide text-accent"
         >
-          01 November 2026
+          {/* TODO: tanggal belum dikonfirmasi, samakan dengan lib/weddingData.ts */}
+          TBD
         </p>
 
         <div data-reveal className="mt-8 grid grid-cols-4 gap-3">

@@ -4,11 +4,11 @@ import type { ProgressData } from "./types";
 // Semua isi di sini bisa diedit langsung dari halaman /persiapan.
 export const DEFAULT_DATA: ProgressData = {
   settings: {
-    nameFirst: "Saiful Amri Tanjung",
-    nameSecond: "Nufus Nurcholisoh",
-    weddingDate: "2026-11-01",
-    ceremonyTime: "08:00",
-    venue: "Kediaman Mempelai Wanita, Pandeglang",
+    nameFirst: "Miqdad Basalamah",
+    nameSecond: "Ismawati",
+    weddingDate: "", // TODO: tanggal belum dikonfirmasi
+    ceremonyTime: "08:30",
+    venue: "Kediaman Mempelai, Ds. Tanjungsari, Kec. Pabuaran, Kab. Serang",
     venueMapUrl: "",
     totalBudget: 0,
   },

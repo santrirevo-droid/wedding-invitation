@@ -12,8 +12,8 @@ export type Family = {
  * names, so keep slugs unique and don't rename one after sharing its link.
  */
 export const families: Family[] = [
-  { slug: "keluarga-mempelai-pria", label: "Keluarga Mempelai Pria (Saiful)" },
-  { slug: "keluarga-mempelai-wanita", label: "Keluarga Mempelai Wanita (Nufus)" },
+  { slug: "keluarga-mempelai-pria", label: "Keluarga Mempelai Pria (Miqdad)" },
+  { slug: "keluarga-mempelai-wanita", label: "Keluarga Mempelai Wanita (Ismawati)" },
   { slug: "teman-kerabat", label: "Teman & Kerabat" },
 ];
 
