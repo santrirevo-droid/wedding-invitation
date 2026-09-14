@@ -1,7 +1,4 @@
-// TODO: tanggal pernikahan belum dikonfirmasi — WEDDING_DATE_ISO di bawah
-// masih tanggal placeholder supaya countdown & kalender tidak error. Ganti
-// begitu tanggal pastinya ada (jam sudah pasti: 08.30 WIB).
-export const WEDDING_DATE_ISO = "2026-12-01T08:30:00+07:00";
+export const WEDDING_DATE_ISO = "2026-09-20T08:30:00+07:00";
 
 export type CoupleRole = "putra" | "putri";
 
@@ -38,12 +35,12 @@ export const events = [
   {
     title: "Akad Nikah",
     time: "08.30 WIB — Selesai",
-    date: "TODO: tanggal belum dikonfirmasi", // TODO: isi tanggal pasti
+    date: "Minggu, 20 September 2026",
   },
   {
     title: "Walimah",
     time: "08.30 WIB — Selesai",
-    date: "TODO: tanggal belum dikonfirmasi", // TODO: isi tanggal pasti
+    date: "Minggu, 20 September 2026",
   },
 ];
 
@@ -55,7 +52,7 @@ export const venue = {
 };
 
 export const bankAccounts = [
-  { bank: "TODO: nama bank/e-wallet", number: "0891378342", holder: "Miqdad Basalamah" },
+  { bank: "BCA", number: "0891378342", holder: "Miqdad Basalamah" },
 ];
 
 export const giftAddress = {

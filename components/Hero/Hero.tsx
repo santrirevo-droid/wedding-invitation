@@ -125,7 +125,7 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <span className="h-px w-8 bg-accent/40" />
               <p className="font-display text-lg font-semibold tracking-wide text-accent">
-                TBD {/* TODO: tanggal belum dikonfirmasi, samakan dengan lib/weddingData.ts */}
+                20 · 09 · 2026
               </p>
               <span className="h-px w-8 bg-accent/40" />
             </div>

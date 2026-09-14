@@ -6,7 +6,7 @@ export const DEFAULT_DATA: ProgressData = {
   settings: {
     nameFirst: "Miqdad Basalamah",
     nameSecond: "Ismawati",
-    weddingDate: "", // TODO: tanggal belum dikonfirmasi
+    weddingDate: "2026-09-20",
     ceremonyTime: "08:30",
     venue: "Kediaman Mempelai, Ds. Tanjungsari, Kec. Pabuaran, Kab. Serang",
     venueMapUrl: "",
