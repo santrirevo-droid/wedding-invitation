@@ -53,18 +53,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Daftar Tamu (guest list collection)
 
-`/daftar-tamu` lets each family add the names of guests they want invited,
-with a live "similar name" check (`/api/guest-list/search`) so two families
-don't independently add the same person without noticing.
+`/daftar-tamu` is one shared list — anyone with the link can add names and
+sees (and can delete) every name already added, with a live "similar name"
+check (`/api/guest-list/search`) while typing so the same person doesn't
+get added twice.
 
-- Edit `lib/families.ts` to set the family names/links before sharing —
-  each family gets its own URL (`/daftar-tamu/<slug>`) and only sees its
-  own entries; nothing else identifies who is submitting.
-- `/daftar-tamu/rekap` is a read-only combined view: every family's list,
-  total counts, and clusters of likely-duplicate names. No password — same
-  as the wishes/RSVP list below, it's a small private tool shared only
-  within the family, not a public page. Deleting an entry still only works
-  from the family's own `/daftar-tamu/<slug>` page.
+- There's no more per-family split/picker — `lib/families.ts` still holds
+  a single `guestListFamily` entry only because the storage layer
+  (`lib/guestList.ts`, the `/api/guest-list*` routes) keys every entry by a
+  "family" slug; it's an implementation detail now, not a UX concept. Only
+  its `label` is user-visible, as the page's `<h1>`.
+- `/daftar-tamu/rekap` is a read-only view of the same list plus clusters
+  of likely-duplicate names. No password — same as the wishes/RSVP list
+  below, it's a small private tool shared only within the family, not a
+  public page. Deleting an entry still only works from `/daftar-tamu`.
 - Storage reuses the same Redis/KV store as the wishes feature below — no
   extra provisioning needed.
 

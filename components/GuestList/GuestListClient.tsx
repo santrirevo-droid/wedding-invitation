@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
-import Link from "next/link";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import type { Family } from "@/lib/families";
 import { buildInviteLink, buildWhatsAppShareUrl } from "@/lib/inviteLink";
 
@@ -30,7 +29,20 @@ function parseNameLines(text: string): string[] {
     .filter(Boolean);
 }
 
-export default function GuestListClient({ family }: { family: Family }) {
+export default function GuestListClient({
+  family,
+  intro,
+  footer,
+}: {
+  family: Family;
+  /** Copy shown under the heading — page-specific, so it's passed in rather
+   * than hardcoded here (this component no longer assumes a multi-family
+   * picker flow lives above it). */
+  intro?: ReactNode;
+  /** Optional content rendered at the very end, inside the same padded
+   * <main> column (e.g. a link to the read-only rekap view). */
+  footer?: ReactNode;
+}) {
   const [entries, setEntries] = useState<GuestEntry[]>([]);
   const [isLoadingList, setIsLoadingList] = useState(true);
 
@@ -190,14 +202,8 @@ export default function GuestListClient({ family }: { family: Family }) {
 
   return (
     <main className="mx-auto flex min-h-full max-w-lg flex-col px-6 py-16">
-      <Link href="/daftar-tamu" className="text-base text-on-maroon-soft underline decoration-accent/60 underline-offset-4">
-        ← Ganti keluarga
-      </Link>
-
-      <h1 className="mt-4 text-3xl font-bold text-on-maroon">{family.label}</h1>
-      <p className="mt-2 text-xl text-on-maroon-soft">
-        Tuliskan nama tamu yang ingin Anda undang, satu nama per baris.
-      </p>
+      <h1 className="text-3xl font-bold text-on-maroon">{family.label}</h1>
+      {intro}
 
       <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-6 rounded-2xl border border-border/90 bg-gradient-to-b from-paper to-[#f1e4cd] p-6 shadow-[0_14px_32px_-20px_rgba(61,42,26,0.22)] ring-1 ring-inset ring-accent/10">
         <div>
@@ -337,6 +343,8 @@ export default function GuestListClient({ family }: { family: Family }) {
           </ul>
         )}
       </section>
+
+      {footer}
     </main>
   );
 }

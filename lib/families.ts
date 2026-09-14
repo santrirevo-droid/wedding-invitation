@@ -1,21 +1,23 @@
 export type Family = {
-  /** URL-safe id, e.g. /daftar-tamu/keluarga-mempelai-pria */
+  /** URL-safe id — kept internally as the storage key for every guest
+   * entry (see lib/guestList.ts), even though there's only one list now. */
   slug: string;
-  /** Shown on buttons and in duplicate-name warnings */
+  /** Shown in duplicate-name warnings */
   label: string;
 };
 
 /**
- * Edit this list before sharing links with each family — one link per
- * entry (e.g. /daftar-tamu/keluarga-mempelai-pria) goes to that family only.
- * The slug in the URL is the only thing that identifies who's adding
- * names, so keep slugs unique and don't rename one after sharing its link.
+ * The site used to split /daftar-tamu into one link per family so each
+ * side only saw their own entries. That's gone — everyone now adds to and
+ * sees one shared list — but the guest-list storage/API still key each
+ * entry by a "family" slug, so this single entry is kept as that shared
+ * key rather than threading a bigger rename through the API routes and
+ * GuestListClient/RekapClient.
  */
-export const families: Family[] = [
-  { slug: "keluarga-mempelai-pria", label: "Keluarga Mempelai Pria (Miqdad)" },
-  { slug: "keluarga-mempelai-wanita", label: "Keluarga Mempelai Wanita (Ismawati)" },
-  { slug: "teman-kerabat", label: "Teman & Kerabat" },
-];
+export const families: Family[] = [{ slug: "tamu-undangan", label: "Daftar Tamu" }];
+
+/** The one shared guest list — see the comment above. */
+export const guestListFamily: Family = families[0];
 
 export function findFamily(slug: string): Family | undefined {
   return families.find((family) => family.slug === slug);
