@@ -22,6 +22,7 @@ function getTimeLeft() {
     hours: Math.floor((diff / 3_600_000) % 24),
     minutes: Math.floor((diff / 60_000) % 60),
     seconds: Math.floor((diff / 1_000) % 60),
+    past: diff <= 0,
   };
 }
 
@@ -96,6 +97,14 @@ export default function Acara() {
             </div>
           ))}
         </div>
+        {timeLeft.past && (
+          <p
+            data-reveal
+            className="mt-4 font-accent text-sm font-medium tracking-[0.08em] text-gold"
+          >
+            Hari bahagia telah tiba 🎉
+          </p>
+        )}
 
         {/* One card for both events — the date's already shown once above,
             so only time (and, for Resepsi, venue/actions) repeats here */}
