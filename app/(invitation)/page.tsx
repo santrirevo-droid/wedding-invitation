@@ -8,6 +8,13 @@ import OpeningQuote from "@/components/OpeningQuote";
 import RSVP from "@/components/RSVP";
 import Wishes from "@/components/Wishes";
 
+// This page bakes a live countdown into its static HTML (Acara). Without a
+// revalidate window, Vercel's CDN can serve that one build-time snapshot
+// for up to a year (s-maxage), so anyone whose browser doesn't run the
+// client JS — e.g. many in-app browsers guests open wedding links from —
+// sees a countdown frozen days or weeks in the past instead of ticking.
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <main className="flex-1">
